@@ -229,7 +229,7 @@ $options->blocked_urls = array();
 // those with a key (see below to specify key(s)).
 // If set to true, no feed is produced unless a valid
 // key is provided.
-$options->key_required = false;
+$options->key_required = true;
 
 // Favour item titles in feed
 // ----------------------
@@ -262,6 +262,7 @@ $options->favour_feed_titles = 'user';
 // is highly recommended (when generating feeds, we encode the key and 
 // refer to it by index number and hash).
 $options->api_keys = array();
+$options->api_keys[1] = '4ljB0Hdq9DWe4iey';
 // Example:
 // $options->api_keys[1] = 'secret-key-1';
 // $options->api_keys[2] = 'secret-key-2';
@@ -274,7 +275,7 @@ $options->default_entries_with_key = 5;
 // Max entries (with access key)
 // ----------------------
 // The maximum number of feed items to process when a valid access key is supplied.
-$options->max_entries_with_key = 10;
+$options->max_entries_with_key = 20;
 
 /////////////////////////////////////////////////
 /// ADVANCED OPTIONS ////////////////////////////
