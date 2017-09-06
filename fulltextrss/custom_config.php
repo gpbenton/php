@@ -262,7 +262,9 @@ $options->favour_feed_titles = 'user';
 // is highly recommended (when generating feeds, we encode the key and 
 // refer to it by index number and hash).
 $options->api_keys = array();
-$options->api_keys[1] = '4ljB0Hdq9DWe4iey';
+$options->api_keys[1] = getenv('apikey1');
+$options->api_keys[2] = getenv('apikey2');
+$options->api_keys[3] = getenv('apikey3');
 // Example:
 // $options->api_keys[1] = 'secret-key-1';
 // $options->api_keys[2] = 'secret-key-2';
