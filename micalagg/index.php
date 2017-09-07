@@ -1,5 +1,13 @@
 <html>
 <head>
+<style>
+#centered { 
+   margin: auto;
+   text-align: center;
+   padding: 10px;
+}
+
+</style>
 </head>
 <body>
 
@@ -29,11 +37,12 @@
 ?>
 
    
-<h1> Calendar Aggregator </h1>
+<h1 id="centered"> Calendar Aggregator </h1>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-  <textarea name=urllist rows=10 cols=50>
+<div id="centered">
+  <textarea name=urllist rows=10 cols=110>
 <?php
       $listfile = fopen("urllist.txt", "r");
       if ($listfile) {
@@ -45,9 +54,14 @@
     ?>
 
   </textarea>
+</div>
 
-  <input type="password" name="password">
+<div id="centered">
+  <span>Password: </span><input type="password" name="password">
+</div>
+<div id="centered">
   <input type="submit" name="Save" value="Save">
+</div>
 </form>
 </body>
 </html>
