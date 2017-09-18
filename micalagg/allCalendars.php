@@ -25,7 +25,9 @@ if ($listfile) {
 foreach ($calendars as &$inputcalendar) {
 
    $config = array ("unique_id" => "-//hewnsw//micalagg-",
-                             "url" => $inputcalendar);
+                    "url" => $inputcalendar,
+                    "directory" =>".",
+                    "filename"=>"icalmerge.ics" );
 
    $vcalendar = new vcalendar($config);
    $vcalendar->parse();
