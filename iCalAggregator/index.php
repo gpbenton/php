@@ -7,6 +7,10 @@
    padding: 10px;
 }
 
+#footer {
+   font-size: small;
+}
+
 </style>
 </head>
 <body>
@@ -70,6 +74,10 @@
 
 <div id="centered">
   Get merged calendar from <a href="./merge.php">here</a>
+</div>
+
+<div id="footer">
+<a href="https://github.com/gpbenton/php/tree/master/iCalAggregator">Calendar Aggregator</a> is powered by <a href="https://github.com/iCalcreator/iCalcreator">iCalcreator</a>
 </div>
 </body>
 </html>
