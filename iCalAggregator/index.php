@@ -16,12 +16,14 @@
 <body>
 
 <?php
+  $urlfilename = "/data/iCalAggregator/urllist.txt";
+
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
     if ($password !== getenv("calagg_password")) {
       die("Invalid password");
     }
-    $listfile = fopen("urllist.txt", "w") or die ("Couldn't open file for writing");
+    $listfile = fopen($urlfilename, "w") or die ("Couldn't open file for writing");
     $urllist = $_POST["urllist"];
     $urlarray = explode("\n", $urllist, 10);
     $numurls = count($urlarray);
@@ -48,8 +50,8 @@
 <div id="centered">
   <textarea name=urllist rows=10 cols=110>
 <?php
-    if (file_exists("urllist.txt")) {
-      $listfile = fopen("urllist.txt", "r");
+    if (file_exists($urlfilename)) {
+      $listfile = fopen($urlfilename, "r");
       if ($listfile) {
         while (!feof($listfile)) {
           echo fgets($listfile);
