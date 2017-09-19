@@ -1,0 +1,3 @@
+[submodule "iCalAggregator/iCalcreator"]
+	path = iCalAggregator/iCalcreator
+	url = https://github.com/iCalcreator/iCalcreator.git
