@@ -67,5 +67,9 @@
   <input type="submit" name="Save" value="Save">
 </div>
 </form>
+
+<div id="centered">
+  Get merged calendar from <a href="./merge.php">here</a>
+</div>
 </body>
 </html>
