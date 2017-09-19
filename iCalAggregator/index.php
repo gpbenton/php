@@ -44,6 +44,7 @@
 <div id="centered">
   <textarea name=urllist rows=10 cols=110>
 <?php
+    if (file_exists("urllist.txt")) {
       $listfile = fopen("urllist.txt", "r");
       if ($listfile) {
         while (!feof($listfile)) {
@@ -51,6 +52,9 @@
         }
         fclose ($listfile);
       }
+    } else {
+      echo "insert calendar urls here";
+    }
     ?>
 
   </textarea>
