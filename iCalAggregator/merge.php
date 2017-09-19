@@ -1,5 +1,7 @@
 <?php
 
+$urlfilename = "/data/iCalAggregator/urllist.txt";
+
 require_once "iCalcreator/autoload.php";
 $errorlog = "errors.log";
 $aggconfig    = array( "unique_id" => "-//hewnsw//micalagg-",
@@ -14,7 +16,7 @@ if ($aggcalendar->useCachedCalendar()) {
 
 $calendars=array();
 
-$listfile = fopen("urllist.txt", "r");
+$listfile = fopen($urlfilename, "r");
 if ($listfile) {
   while (!feof($listfile)) {
     $calendars[]=fgets($listfile);
