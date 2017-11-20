@@ -32,6 +32,10 @@
       fwrite($listfile, $url . "\n");
     }
     fclose($listfile);
+    # Remove existing file to clear cache
+    if (file_exists("icalmerge.ics") {
+      unlink("icalmerge.ics")
+    }
   }
 
   function validate_url($data) {
